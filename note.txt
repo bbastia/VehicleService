@@ -1,4 +1,4 @@
-new change this is new branch note 
+this is new branch note 
 this project is all about demo project which i made for git and spring mvc practice.
 
 
