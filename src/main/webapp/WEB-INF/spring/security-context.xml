@@ -12,7 +12,6 @@
 			password-parameter="custom_password" default-target-url="/services"
 			always-use-default-target="true" authentication-failure-url="/login?error=true" />
 
-	
 		<security:logout logout-url="/logout" logout-success-url="/login?logout=true"/>
 		<security:intercept-url pattern="/appointments/*"
 			access="ROLE_USER,ROLE_ADMIN" />
@@ -21,8 +20,9 @@
 		<security:intercept-url pattern="/**"
 			access="ROLE_ANONYMOUS,ROLE_USER,ROLE_ADMIN" />
 
+	<!-- <security:remember-me services-ref="rememberMeServices" key="remember" /> -->
 	</security:http>
-
+	
 <security:authentication-manager>
 		<security:authentication-provider>
 			<security:user-service>
