@@ -1,4 +1,7 @@
-tdding tag
+
+This is some new changes on note.txt
+
+adding tag
 his is new branch note 
 this project is all about demo project which i made for git and spring mvc practice.
 
