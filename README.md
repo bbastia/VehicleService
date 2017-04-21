@@ -1,3 +1,3 @@
 # SpringMVC
-this is simple vehicle service project.
+this is simple vehicle service project. which i created for do some practice on spring framework and hibernate .
 Adding some extra features ...
