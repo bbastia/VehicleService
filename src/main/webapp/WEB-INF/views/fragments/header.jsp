@@ -47,7 +47,10 @@
 					<c:when test="${authenticated}">
 					<li><a class="glyphicon glyphicon-wrench" href="<spring:url value="/services/"/>">Services</a></li>
 				<li><a  class="glyphicon glyphicon-list-alt" href="<spring:url value="/appointments/"/>">Appointments</a></li>
+				
+				<sec:authorize access="hasRole('ROLE_ADMIN')">
 				<li><a class="glyphicon glyphicon-calendar" href="<spring:url value="/schedule/"/>">Schedule</a></li>
+				</sec:authorize>
 						
 							<li style="padding-left:320px">	
 							<a  href="#">Welcome &nbsp; <div class="glyphicon glyphicon-user" ></div><sec:authentication property="name"/></a>
@@ -61,7 +64,8 @@
 					
 					</c:when>
 					<c:otherwise>
-						<li><a href="<spring:url value="/login/"/>">Sign In</a></li>			
+						<li><a href="<spring:url value="/login/"/>">Sign In</a></li>	
+						<li><a href="<spring:url value="/register"/>">Sign up</a></li>					
 					</c:otherwise>
 				</c:choose>
 				

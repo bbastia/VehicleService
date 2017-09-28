@@ -72,8 +72,13 @@ create table APPOINTMENT (
         foreign key (APPOINTMENT_ID) 
         references APPOINTMENT;
 
-insert into users(username, password, enabled) values ('nuser', '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8', 1);
-insert into users(username, password, enabled) values ('auser', 'password', 1);
+insert into users(username, password, enabled) values ('nuser', '$2a$10$cDIpi60Q7/ovcmo8WBfFQOfrguN0m39gwIMgiq2fQPm3RZQ1kRYi.', 1);
+insert into users(username, password, enabled) values ('auser', '$2a$10$cDIpi60Q7/ovcmo8WBfFQOfrguN0m39gwIMgiq2fQPm3RZQ1kRYi.', 1);
+
+insert into authorities(username,authority) values('nuser','ROLE_USER');
+insert into authorities(username,authority) values('nuser','ROLE_ADMIN');
+insert into authorities(username,authority) values('auser','ROLE_USER');
+
 
 insert into groups(id, group_name) values(1, 'Admins');
 insert into group_authorities(group_id, authority) values (1, 'ROLE_USER');

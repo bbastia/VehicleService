@@ -6,31 +6,32 @@
 
 	<bean class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
 
+
 	<security:http auto-config="true" use-expressions="false">
+	<security:csrf disabled="false"/>
 		<security:form-login login-page="/login"
 			login-processing-url="/login" username-parameter="custom_username"
 			password-parameter="custom_password" default-target-url="/services"
-			always-use-default-target="true" authentication-failure-url="/login?error=true" />
+			always-use-default-target="false" authentication-failure-url="/login?error=true" />
 
 		<security:logout logout-url="/logout" logout-success-url="/login?logout=true"/>
-		<security:intercept-url pattern="/appointments/*"
-			access="ROLE_USER,ROLE_ADMIN" />
-		<security:intercept-url pattern="/schedule/*"
-			access="ROLE_ADMIN" />
-		<security:intercept-url pattern="/**"
-			access="ROLE_ANONYMOUS,ROLE_USER,ROLE_ADMIN" />
+		
+		<security:intercept-url pattern="/login" access="ROLE_ANONYMOUS" requires-channel="https" />
+		<security:intercept-url pattern="/appointments/*"	access="ROLE_USER,ROLE_ADMIN" />
+		<security:intercept-url pattern="/schedule/*" access="ROLE_ADMIN" />
+		<security:intercept-url pattern="/**" access="ROLE_ANONYMOUS,ROLE_USER,ROLE_ADMIN" />
 
 	<!-- <security:remember-me services-ref="rememberMeServices" key="remember" /> -->
 	</security:http>
+
 	
-<security:authentication-manager>
+<security:authentication-manager alias="aboveAuthentication">
 		<security:authentication-provider>
-			<security:user-service>
-				<security:user name="biswajit" password="password" authorities="ROLE_ADMIN,ROLE_USER"/>
-				<security:user name="khare" password="password" authorities="ROLE_USER,ROLE_FOO"/>
-			</security:user-service>
+			<security:jdbc-user-service data-source-ref="datasource" />
+			<security:password-encoder ref="bcryptPasswordEncoder"/>
 		</security:authentication-provider>
 	</security:authentication-manager>
 
 	<bean id="passwordEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"/>
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 </beans>
