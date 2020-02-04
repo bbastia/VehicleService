@@ -7,17 +7,18 @@ phases:
 
   build:
     commands:
+      - echo Entered the build phase...
       - echo Build started on `date`
-      - mvn clean package
-
+      - mvn clean install
   post_build:
     commands:
+      - echo Entered the post_build phase...
       - echo Build completed on `date`
-      - mv target/*.war ROOT.war
 
 artifacts:
   files:
-    'ROOT.war'
+    - target/VehicleService-0.0.1-RELEASE.war
+  discard-paths: yes
 
 cache:
   paths:
