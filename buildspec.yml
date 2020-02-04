@@ -13,10 +13,11 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn clean package
+      - mv target/VehicleService-0.0.1-RELEASE.war ./
 artifacts:
   files:
-    - target/*
-discard-paths: yes
+    - ./VehicleService-0.0.1-RELEASE.war
+
 cache:
   paths:
     - '/root/.m2/**/*'
