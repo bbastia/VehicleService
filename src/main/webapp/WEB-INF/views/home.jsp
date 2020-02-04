@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Above Solution</title>
+<title>Vehicle Service</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<spring:url value="/resources/css/home.css"/>" type="text/css"/>
@@ -26,7 +26,7 @@
 
 	<div class="container">
 		
-		<h2 class="card-panel teal lighten-2">Above Project</h2>
+		<h2 class="card-panel teal lighten-2">Vehicle Service</h2>
 		<ul class="list-group">
   			<li class="list-group-item"><label>Project Name:</label><span>${currentProject.name }</span></li>
   			<li class="list-group-item"><label>Sponsor:</label><span>${currentProject.sponsor.name }</span></li>

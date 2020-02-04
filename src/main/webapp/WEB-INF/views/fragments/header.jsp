@@ -9,7 +9,7 @@
 			
       			<a class="navbar-brand" href="<spring:url value="/"/>"></a>
     		</div>
-    		<!-- <a href="#" class="navbar-left"><img src="<c:url value="/resources/images/logo.jpg" />" alt="Above Solution"></a> -->
+    		<!-- <a href="#" class="navbar-left"><img src="<c:url value="/resources/images/logo.jpg" />" alt="vehicle Service"></a> -->
     		<ul class="nav navbar-nav">
     			
     			<li><a class="glyphicon glyphicon-home" href="<spring:url value="/"/>">Home</a></li>

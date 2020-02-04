@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Above Vehicle Service</title>
+<title>Vehicle Service</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
@@ -36,8 +36,8 @@
     <div class="row">
         <div class="col m6">
         <br/>
-            <h3>Above vehicle service</h3>
-            <p>Above vehicle service is a series of maintenance procedures carried out at a set time interval or after the vehicle has travelled a certain distance. The service intervals are specified by the vehicle manufacturer in a service schedule and some modern cars display the due date for the next service electronically on the instrument panel.
+            <h3>vehicle service</h3>
+            <p>vehicle service is a series of maintenance procedures carried out at a set time interval or after the vehicle has travelled a certain distance. The service intervals are specified by the vehicle manufacturer in a service schedule and some modern cars display the due date for the next service electronically on the instrument panel.
 
 The completed services are usually recorded in a service book which is rubber stamped by the service centre upon completion of each service. A complete service history usually adds to the resale value of a vehicle.</p>
         </div>

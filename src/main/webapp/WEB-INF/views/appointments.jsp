@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Above Vehicle Service</title>
+<title>Vehicle Service</title>
 
 <link rel="stylesheet"
 	href="<spring:url value="/resources/css/Global.css"/>" />
