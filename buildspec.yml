@@ -17,7 +17,7 @@ phases:
 artifacts:
   files:
     - artifact/**/*
-    - name: artifact
+  name: artifact
 
 cache:
   paths:
