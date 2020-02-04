@@ -8,16 +8,15 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean prepare-package war:exploded
+      - mvn test
   post_build:
     commands:
       - echo Build completed on `date`
-      - mv target/deploy ./
-
+      - mvn clean package
 artifacts:
   files:
-    - deploy/**/*
-
+    - target/*
+discard-paths: yes
 cache:
   paths:
     - '/root/.m2/**/*'
