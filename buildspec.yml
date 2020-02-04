@@ -14,10 +14,12 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - echo Build completed on `date`
+      - mkdir artifact
+      - unzip target/VehicleService-0.0.1-RELEASE.war -d ./artifact/
 
 artifacts:
   files:
-    - target/VehicleService-0.0.1-RELEASE.war
+    - artifact/**/*
   discard-paths: yes
 
 cache:
