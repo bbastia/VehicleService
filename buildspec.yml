@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean pacakge
+      - mvn clean package
 
   post_build:
     commands:
