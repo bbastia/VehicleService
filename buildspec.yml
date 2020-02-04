@@ -8,15 +8,16 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn test
+      - mvn clean pacakge
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn clean package
-      - mv target/VehicleService-0.0.1-RELEASE.war ./
+      - mkdir artifact
+      - unzip target/VehicleService-0.0.1-RELEASE.war -d artifact/
 artifacts:
   files:
-    - ./VehicleService-0.0.1-RELEASE.war
+    - artifact/**/*
+    - name: artifact
 
 cache:
   paths:
