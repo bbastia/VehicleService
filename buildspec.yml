@@ -19,7 +19,7 @@ phases:
 
 artifacts:
   files:
-    - artifact/**/*
+    - artifact/*
   discard-paths: yes
 
 cache:
