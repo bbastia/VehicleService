@@ -12,10 +12,10 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - mvn clean package
 artifacts:
   files:
-    - target/VehicleService-0.0.1-RELEASE.war
+    - target/*
 
 cache:
   paths:
