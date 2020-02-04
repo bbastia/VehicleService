@@ -13,9 +13,10 @@ phases:
     commands:
       - echo Build completed on `date`
       - mv target/deploy ./
-  artifacts:
-    files:
-      - deploy/**/*
+
+artifacts:
+  files:
+    - deploy/**/*
 
 cache:
   paths:
