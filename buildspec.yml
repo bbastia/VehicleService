@@ -9,15 +9,15 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn clean pacakge
+
   post_build:
     commands:
       - echo Build completed on `date`
-      - mkdir artifact
-      - unzip target/*.war -d artifact/
+      - mv target/*.war ROOT.war
+
 artifacts:
   files:
-    - artifact/**/*
-  name: artifact
+    'ROOT.war'|
 
 cache:
   paths:
