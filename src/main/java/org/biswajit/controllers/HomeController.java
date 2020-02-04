@@ -46,7 +46,7 @@ public class HomeController {
 		Project project = new Project();
 		project.setName("Vehicle service Project");
 		project.setSponsor(new Sponsor("biswajitbastia.com", "555-555-5555", "biswajit@above.com"));
-		project.setDescription("This is a simple project sponsored by Above");
+		project.setDescription("This is a simple project sponsored by biswajitbastia");
 		
 		model.addAttribute("currentProject", project);
 		
