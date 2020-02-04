@@ -16,3 +16,7 @@ phases:
 artifacts:
   files:
     - target/VehicleService-0.0.1-RELEASE.war
+
+cache:
+  paths:
+    - '/root/.m2/**/*'
