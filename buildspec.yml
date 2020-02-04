@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mkdir artifact
-      - unzip target/VehicleService-0.0.1-RELEASE.war -d artifact/
+      - unzip target/*.war -d artifact/
 artifacts:
   files:
     - artifact/**/*
